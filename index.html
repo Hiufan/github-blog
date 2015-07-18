@@ -9,10 +9,13 @@
 		
 	</div>
 	<script src="http://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
-	<script src="https://raw.githubusercontent.com/aui/artTemplate/master/dist/template.js"></script>
+	<script src="http://aui.github.io/artTemplate/dist/template.js"></script>
 	<script>
 	$(function(){
-		$.get('');
+		var url = "https://api.github.com/repos/Hiufan/github-blog/contents/articles";
+		$.get(url, function (result) {
+			console.log(result);
+		});
 	});
 	</script>
 </body>
