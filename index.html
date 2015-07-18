@@ -5,18 +5,20 @@
 	<title>Github Pages Test</title>
 </head>
 <body>
-	<div class="home">
-		
+	<div id="app">
+		<ul id="article-list" style="display:none;">
+		    <li v-repeat="list">
+		        <a href="#/article/{{$index}}"> {{$index}} -- {{name|basename}}</a>
+		    </li>
+		</ul>		
 	</div>
-	<script src="http://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
+	<script src="scripts/vendor/jquery.min.js"></script>
+	<script src="scripts/vendor/vue.min.js"></script>
 	<script src="http://aui.github.io/artTemplate/dist/template.js"></script>
-	<script>
-	$(function(){
-		var url = "https://api.github.com/repos/Hiufan/github-blog/contents/articles";
-		$.get(url, function (result) {
-			console.log(result);
-		});
-	});
-	</script>
+	<script src="scripts/vendor/director.min.js"></script>
+    <script src="scripts/vendor/showdown.js"></script>
+    <script src="scripts/dev/decode64.js"></script>
+    <script src="scripts/dev/index.js"></script>
+	<script src="scripts/dev/filter.js"></script>
 </body>
 </html>
